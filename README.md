@@ -26,5 +26,5 @@ The approach for this game is to use classes and orient the code to objects.
 
 -divided into smaller tasks. Trello to organize tasks and to keep track of progress. Also, a wireframe to have a better idea of how the game looks.
 
-LINK OF THE PUBLISHED GAME: `work in progress`
+LINK OF THE PUBLISHED GAME: https://zomgbat.github.io/Game-Project/
 LINK OF THE SLIDES: `work in progress`
