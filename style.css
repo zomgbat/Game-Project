@@ -12,7 +12,7 @@ body {
 
 #game-board {
     width: 960px;
-    height: 720px;
+    height: 620px;
     background-color: aqua;
     position: relative;
     overflow: hidden;
@@ -34,7 +34,8 @@ body {
     left: 200px;
     width: 60px;
     height: 66px;
-    background-color: rgb(142, 84, 219);
+    background-color: red;
+ 
 }
 
 

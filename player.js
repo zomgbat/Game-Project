@@ -1,30 +1,40 @@
-class Player {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.velocity = 10
-        this.element = document.querySelector("#player");
-        this.width = this.element.getBoundingClientRect().width;
-        this.height = this.element.getBoundingClientRect().height;
-        this.element.style.left = `${this.x}px`
-        this.element.style.top = `${this.y}px`
-    }
+const player = document.getElementById("player");
 
-move(direction) {
-    switch (direction) {
+// Initial player position
+let playerX = 50;
+let playerY = 50;
+
+// Player speed
+const playerSpeed = 5;
+
+// Update player position
+function updatePlayerPosition() {
+    player.style.left = `${playerX}px`;
+    player.style.top = `${playerY}px`;
+}
+
+// Handle keydown events
+document.addEventListener("keydown", (event) => {
+    switch (event.key) {
         case "ArrowUp":
-            this.y -= this.velocity;
+            playerY -= playerSpeed;
             break;
         case "ArrowDown":
-            this.y += this.velocity;
+            playerY += playerSpeed;
             break;
         case "ArrowLeft":
-            this.x -= this.velocity;
+            playerX -= playerSpeed;
             break;
         case "ArrowRight":
-            this.x += this.velocity;
+            playerX += playerSpeed;
             break;
-        }
-        
-}
-}
+    }
+
+    // Update player position
+    updatePlayerPosition();
+});
+
+// Initial update of player position
+updatePlayerPosition();
+
+
