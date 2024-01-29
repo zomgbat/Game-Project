@@ -3,6 +3,8 @@
 margin: 0px;
 padding: 0px;
 font-family: monospace;
+size: 12px;
+color: darkblue;
 
 }
 
@@ -11,11 +13,11 @@ body {
 }
 
 #game-board {
-    width: 960px;
-    height: 620px;
-    background-color: aqua;
+    width: 700px;
+    height: 420px;
     position: relative;
     overflow: hidden;
+    background: url("https://external-preview.redd.it/VFAdB1esp6F_2qfH3ftUJiHKErdR-NmqDCm442OlFX8.jpg?width=960&crop=smart&auto=webp&s=54c0eddceaa13ceda72bbe6b48cf061cb74d0901");
 
 }
 
@@ -30,17 +32,13 @@ body {
   
   .enemy{
     position: absolute;
-    top: 200px;
-    left: 200px;
-    width: 60px;
-    height: 66px;
-    background-color: red;
- 
+    width: 125px;
+    height: 50px;
+    background: url('https://pngimg.com/d/shark_PNG18830.png') center/cover;
 }
+    
 
 
-   /* background: url("https://external-preview.redd.it/VFAdB1esp6F_2qfH3ftUJiHKErdR-NmqDCm442OlFX8.jpg?width=960&crop=smart&auto=webp&s=54c0eddceaa13ceda72bbe6b48cf061cb74d0901");
- /*
-
+ 
 
 
