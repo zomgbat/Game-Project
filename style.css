@@ -5,3 +5,41 @@ padding: 0px;
 font-family: monospace;
 
 }
+
+body {
+    
+}
+
+#game-board {
+    width: 960px;
+    height: 720px;
+    background-color: aqua;
+    position: relative;
+    overflow: hidden;
+
+}
+
+#player {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 60px;
+    height: 66px;
+    background: url('https://cdn-icons-png.flaticon.com/512/3118/3118044.png') center/cover;
+  }
+  
+  .enemy{
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    width: 60px;
+    height: 66px;
+    background-color: rgb(142, 84, 219);
+}
+
+
+   /* background: url("https://external-preview.redd.it/VFAdB1esp6F_2qfH3ftUJiHKErdR-NmqDCm442OlFX8.jpg?width=960&crop=smart&auto=webp&s=54c0eddceaa13ceda72bbe6b48cf061cb74d0901");
+ /*
+
+
+
