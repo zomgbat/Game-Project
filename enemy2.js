@@ -1,9 +1,9 @@
-class Enemy {
+class Enemy2 {
     constructor(velocity) {
 
         this.velocity = velocity;
         this.element = document.createElement("div");
-        this.element.classList.add("enemy");
+        this.element.classList.add("enemy2");
         boardElement.appendChild(this.element);
         this.width = this.element.getBoundingClientRect().width;
         this.height = this.element.getBoundingClientRect().height;
@@ -23,8 +23,6 @@ checkForBoundaries() {
     }
 }
 
-
-// code for enemies appearing from X not Y
   /*  this.x = boardWidth;
     this.y = Math.floor(Math.random() * (boardHeight - this.height))
     this.element.style.left = `${this.x}px`
@@ -46,9 +44,9 @@ checkForBoundaries() {
 
 
 
-    deSpawn() {
+    deSpawn2() {
         this.element.remove()
-        const enemyIndex = game.enemies.indexOf(this) // Where am I?
-        game.enemies.splice(enemyIndex, 1);
+        const enemyIndex2 = game.enemies2.indexOf(this) // Where am I?
+        game.enemies2.splice(enemy2Index, 1);
     }
 }

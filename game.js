@@ -1,6 +1,8 @@
 class Game {
     constructor(lives) {
         this.enemies = [];
+        this.enemies2 = [];
+        this.frenemies = [];
         this.player = new Player(100, 100);
         this.score = 0;
         this.frames = 0;
@@ -21,6 +23,8 @@ class Game {
 
     
 }
+
+/*
 
 
 function displayCrashMessage() {
@@ -67,3 +71,4 @@ function displayCrashMessage() {
 }
 
 
+*/

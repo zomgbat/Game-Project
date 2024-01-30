@@ -9,6 +9,8 @@ color: darkblue;
 }
 
 body {
+
+  
     
 }
 
@@ -17,9 +19,7 @@ body {
     height: 420px;
     position: relative;
     overflow: hidden;
-    background: url("https://external-preview.redd.it/VFAdB1esp6F_2qfH3ftUJiHKErdR-NmqDCm442OlFX8.jpg?width=960&crop=smart&auto=webp&s=54c0eddceaa13ceda72bbe6b48cf061cb74d0901");
-
-}
+    background: url("https://external-preview.redd.it/VFAdB1esp6F_2qfH3ftUJiHKErdR-NmqDCm442OlFX8.jpg?width=960&crop=smart&auto=webp&s=54c0eddceaa13ceda72bbe6b48cf061cb74d0901");}
 
 #player {
     position: absolute;
@@ -27,18 +27,43 @@ body {
     left: 100px;
     width: 60px;
     height: 66px;
-    background: url('https://cdn-icons-png.flaticon.com/512/3118/3118044.png') center/cover;
+    background: url('https://cdn-icons-png.flaticon.com/512/3118/3118044.png') center/cover;)
   }
   
+ 
   .enemy{
     position: absolute;
     width: 125px;
     height: 50px;
-    background: url('https://pngimg.com/d/shark_PNG18830.png') center/cover;
+    background-color: red;
 }
+
+
+.frenemy{
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background-color: green;
+}
+
+
+.enemy2{
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background-color: orange;
+}
+
+
+
     
 
 
  
+/*
 
+//url("https://external-preview.redd.it/VFAdB1esp6F_2qfH3ftUJiHKErdR-NmqDCm442OlFX8.jpg?width=960&crop=smart&auto=webp&s=54c0eddceaa13ceda72bbe6b48cf061cb74d0901"
+ //url('https://cdn-icons-png.flaticon.com/512/3118/3118044.png') center/cover;
+
+//url('https://pngimg.com/d/shark_PNG18830.png') center/cover; */
 
