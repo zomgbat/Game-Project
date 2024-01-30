@@ -26,7 +26,7 @@ class Enemy2 {
 
     deSpawn() {
         this.element.remove();
-        const enemyIndex2 = game.enemies2.indexOf(this);
+        const enemy2Index2 = game.enemies2.indexOf(this);
         game.enemies2.splice(enemyIndex2, 1);
     }
 }

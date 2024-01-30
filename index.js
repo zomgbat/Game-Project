@@ -22,10 +22,10 @@ function gameloop() {
         if (game.frames % enemyCreationFrame === 0) {
             game.enemies.push(new Enemy(enemyVelocity));
             // Create and push three enemies
-game.enemies2.push(new Enemy2(enemyVelocity));
-game.frenemies.push(new frenemy(enemyVelocity));
-
-            console.log(game.enemies);
+            game.enemies2.push(new Enemy2(enemy2Velocity));
+             game.frenemies.push(new frenemy(frenemyVelocity));
+            
+            
         }
         if (game.frames % scoreIncrementFrame === 0) {
             game.score++;

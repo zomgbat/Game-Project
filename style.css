@@ -3,7 +3,14 @@ margin: 0px;
 padding: 0px;
 font-family: monospace;
 size: 12px;
-color: darkblue;
+color: black;
+}
+
+h1 {
+  background-image: url('https://as2.ftcdn.net/v2/jpg/04/64/84/79/1000_F_464847981_b4uMmaoh4wN6Iv93g6YiN3BNy03g1Uw6.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Adjust to 'contain' or other values based on your preference */
+  color: #fff; /* Set the text color to be visible against the background image */
+  padding: 10px; /* Optional: Add padding for better aesthetics */
 }
 
 

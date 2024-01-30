@@ -26,6 +26,8 @@ class Game {
 
 /*
 
+If I want to add a RADIO BUTTON with 4 options
+
 
 function displayCrashMessage() {
     const options = [
