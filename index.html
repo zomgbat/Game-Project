@@ -10,19 +10,33 @@
 
 <body>
 
-    
-    
-    <h1>Unblock the Loch  
-        <p>Lives: <span id="lives">0</span></p>
-        <p>Score: <span id="score">0</span></p> </h1>
-    <div id="game-board">
-        
-        <div id="player"></div>
-        
+
+    <div id="start-screen">
+        <h1>Unblock the Loch <p>Lives: <span id="lives">0</span></p>
+            <p>Score: <span id="score">0</span></p>
+        </h1>
+        <button id="startButton" class="buttonClass">Start New Game</button>
+        <div id="intro">
+            <p>Instructions: [Your game instructions here]</p>
+
+        </div>
     </div>
- 
-   
-    
+    <div id="game-board">
+        <p>Lives: <span id="lives">0</span></p>
+        <p>Score: <span id="score">0</span></p>
+        <div id="player"></div>
+
+        <!-- Add this button inside your body tag -->
+        <button id="restartButton" style="display: none;">Restart Game</button>
+    </div>
+
+
+
+
+
+
+
+
     <script src="./player.js"></script>
     <script src="./enemy.js"></script>
     <script src="./frenemy.js"></script>
@@ -33,4 +47,3 @@
 </body>
 
 </html>
-

@@ -1,6 +1,6 @@
 class Enemy2 {
-    constructor(velocity) {
-        this.velocity = velocity;
+    constructor(enemy2Velocity) {
+        this.velocity = enemy2Velocity;
         this.element = document.createElement("div");
         this.element.classList.add("enemy2");
         boardElement.appendChild(this.element);
@@ -26,10 +26,12 @@ class Enemy2 {
 
     deSpawn() {
         this.element.remove();
-        const enemy2Index2 = game.enemies2.indexOf(this);
+        const enemyIndex2 = game.enemies2.indexOf(this);
         game.enemies2.splice(enemyIndex2, 1);
     }
 }
+
+
 
 
 

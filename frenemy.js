@@ -1,7 +1,7 @@
 class frenemy {
-    constructor(velocity) {
+    constructor(frenemyVelocity) {
 
-        this.velocity = velocity;
+        this.velocity = frenemyVelocity;
         this.element = document.createElement("div");
         this.element.classList.add("frenemy");
         boardElement.appendChild(this.element);
@@ -27,7 +27,7 @@ checkForBoundaries() {
 
     deSpawn() {
         this.element.remove()
-        const enemyIndex = game.frenemies.indexOf(this) // Where am I?
-        game.frenemies.splice(enemyIndex , 1);
+        const frenemyIndex = game.frenemies.indexOf(this) // Where am I?
+        game.frenemies.splice(frenemyIndex, 1);
     }
 }

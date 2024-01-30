@@ -115,7 +115,7 @@ class Player {
                 playerTopEdge < frenemyBottomEdge &&
                 playerBottomEdge > frenemyTopEdge
             ) {
-                game.score += 1;
+                game.score += 100;
                 game.updateScore();
                 frenemy.deSpawn();
             }
