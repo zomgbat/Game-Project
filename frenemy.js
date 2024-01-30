@@ -1,4 +1,4 @@
-class Enemy2 {
+class frenemy {
     constructor(velocity) {
 
         this.velocity = velocity;
@@ -23,30 +23,11 @@ checkForBoundaries() {
     }
 }
 
-  /*  this.x = boardWidth;
-    this.y = Math.floor(Math.random() * (boardHeight - this.height))
-    this.element.style.left = `${this.x}px`
-    this.element.style.top = `${this.y}px`
-}
-move() {
-    this.x -= this.velocity;
-    this.element.style.left = `${this.x}px`
-}
-checkForBoundaries() {
-    if (this.x <= 0 - this.width) {
-        this.deSpawn()
-    }
-}
 
 
-
-*/
-
-
-
-    deSpawn3() {
+    deSpawn() {
         this.element.remove()
         const enemyIndex = game.frenemies.indexOf(this) // Where am I?
-        game.frenemies.splice(frenemyIndex, 1);
+        game.frenemies.splice(enemyIndex , 1);
     }
 }

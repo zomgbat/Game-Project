@@ -21,6 +21,10 @@ function gameloop() {
         game.player.crashTest();
         if (game.frames % enemyCreationFrame === 0) {
             game.enemies.push(new Enemy(enemyVelocity));
+            // Create and push three enemies
+game.enemies2.push(new Enemy2(enemyVelocity));
+game.frenemies.push(new frenemy(enemyVelocity));
+
             console.log(game.enemies);
         }
         if (game.frames % scoreIncrementFrame === 0) {
@@ -31,6 +35,14 @@ function gameloop() {
             enemy.move();
             enemy.checkForBoundaries();
         });
+        game.enemies2.forEach((enemy2) => {
+            enemy2.move();
+            enemy2.checkForBoundaries();
+        });
+        game.frenemies.forEach((frenemy) => {
+            frenemy.move();
+            frenemy.checkForBoundaries();
+        });
         requestAnimationFrame(gameloop);
     } else {
         game.player.element.remove();
@@ -38,55 +50,8 @@ function gameloop() {
     }
 }
 
-function gameloop2() {
-    if (!game.gameOver) {
-        game.frames++;
-        game.player.crashTest();
-        if (game.frames % enemy2CreationFrame === 0) {
-            game.enemies2.push(new Enemy2(enemy2Velocity));
-            console.log(game.enemies2);
-        }
-        if (game.frames % scoreIncrementFrame === 0) {
-            game.score++;
-            game.updateScore();
-        }
-        game.enemies2.forEach((enemy2) => {
-            enemy2.move();
-            enemy2.checkForBoundaries();
-        });
-        requestAnimationFrame(gameloop2);
-    } else {
-        game.player.element.remove();
-        // displayCrashMessage()
-    }
-}
-
-function gameloop3() {
-    if (!game.gameOver) {
-        game.frames++;
-        game.player.crashTest();
-        if (game.frames % frenemyCreationFrame === 0) {
-            game.frenemies.push(new Frenemy(frenemyVelocity));
-            console.log(game.frenemies);
-        }
-        if (game.frames % scoreIncrementFrame === 0) {
-            game.score++;
-            game.updateScore();
-        }
-        game.frenemies.forEach((frenemy) => {
-            frenemy.move();
-            frenemy.checkForBoundaries();
-        });
-        requestAnimationFrame(gameloop3);
-    } else {
-        game.player.element.remove();
-        // displayCrashMessage()
-    }
-}
-
 requestAnimationFrame(gameloop);
-requestAnimationFrame(gameloop2);
-requestAnimationFrame(gameloop3);
+
 
 document.addEventListener("keydown", (event) => {
     if (!game.gameOver) {

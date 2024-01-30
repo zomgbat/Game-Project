@@ -1,18 +1,11 @@
 *{
-
 margin: 0px;
 padding: 0px;
 font-family: monospace;
 size: 12px;
 color: darkblue;
-
 }
 
-body {
-
-  
-    
-}
 
 #game-board {
     width: 700px;
@@ -33,10 +26,10 @@ body {
  
   .enemy{
     position: absolute;
-    width: 125px;
-    height: 50px;
-    background-color: red;
-}
+    width: 95px;
+    height: 60px;
+    background: url('https://pngimg.com/d/shark_PNG18830.png') center/cover;
+   }
 
 
 .frenemy{
@@ -49,9 +42,9 @@ body {
 
 .enemy2{
   position: absolute;
-  width: 10px;
-  height: 20px;
-  background-color: orange;
+  width: 35px;
+  height: 60px;
+  background-color: orangered;
 }
 
 
