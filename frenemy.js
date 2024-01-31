@@ -32,3 +32,5 @@ checkForBoundaries() {
         game.frenemies.splice(frenemyIndex, 1);
     }
 }
+
+// Could just use .extends.enemy in future 

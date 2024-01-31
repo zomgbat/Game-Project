@@ -32,7 +32,7 @@ class Enemy2 {
 }
 
 
-
+// Could just use .extends.enemy in future 
 
 
 

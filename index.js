@@ -4,18 +4,21 @@ let enemyCreationFrame = 100;
 let enemy2CreationFrame = 100;
 let frenemyCreationFrame = 70;
 let scoreIncrementFrame = 10;
-let enemyVelocity = 5;
-let enemy2Velocity = 4;
+let enemyVelocity = 15;
+let enemy2Velocity = 10;
 let frenemyVelocity = 5;
 let gameLives = 100;
 
 const boardElement = document.querySelector("#game-board");
 const boardWidth = boardElement.getBoundingClientRect().width;
 const boardHeight = boardElement.getBoundingClientRect().height;
+const bgmusic = document.querySelector("#bgmusic");
+bgmusic2.volume = 0.2;
 
 
 const startButton = document.querySelector("#startButton");
 startButton.onclick = () => {
+
     boardElement.style.visibility = "visible";
 
 
@@ -23,9 +26,15 @@ startButton.onclick = () => {
     deletePage.remove();
 
     fullGame();
+    bgmusic2() 
 };
+
+
+
 let game
+// Call the fullGame function to start the game
 function fullGame() {
+   
     
      game = new Game(gameLives);
     const gameBoard = document.getElementById("game-board");
@@ -101,6 +110,6 @@ restartButton.onclick = () => {
 
 
 
-// Call the fullGame function to start the game
+
 
 

@@ -1,7 +1,7 @@
 class Player {
     constructor(x, y) {
         this.x = x;
-        this.y = y;
+        this.y = boardHeight - 150;
         this.velocity = 70;
         this.element = document.querySelector("#player");
         this.width = this.element.getBoundingClientRect().width;
@@ -14,6 +14,12 @@ class Player {
         switch (direction) {
             case "ArrowUp":
                 this.y -= this.velocity;
+
+                // Ensure the player does not move above line 150
+                if (this.y < 400) {
+                    this.y = 400;
+                }
+
                 break;
             case "ArrowDown":
                 this.y += this.velocity;
@@ -26,6 +32,7 @@ class Player {
                 break;
         }
 
+
         this.checkForBoundaries();
 
       
@@ -35,14 +42,16 @@ class Player {
     }
 
     checkForBoundaries() {
+
+    
         if (this.x <= 0) {
             this.x = 0;
         }
         if (this.y <= 0) {
             this.y = 0;
         }
-        if (this.y >= boardHeight - this.height) {
-            this.y = boardHeight - this.height;
+        if (this.y >= boardHeight - this.height ) {
+            this.y = boardHeight  - this.height ;
         }
         if (this.x >= boardWidth - this.width) {
             this.x = boardWidth - this.width;
@@ -51,6 +60,8 @@ class Player {
 
     crashTest() {
         game.enemies.forEach((enemy) => {
+            
+            
             const enemyLeftEdge = enemy.x;
             const enemyRightEdge = enemy.x + enemy.width;
             const enemyTopEdge = enemy.y;
@@ -70,6 +81,7 @@ class Player {
                 game.lives -= 1;
                 game.updateLives();
                 enemy.deSpawn();
+                playCollisionSound3() 
             }
         });
     }
@@ -95,6 +107,7 @@ class Player {
                 game.lives -= 1;
                 game.updateLives();
                 enemy2.deSpawn();
+                playCollisionSound2() 
             }
         });
     }
@@ -120,6 +133,7 @@ class Player {
                 game.score += 100;
                 game.updateScore();
                 frenemy.deSpawn();
+                playCollisionSound() 
             }
         });
     }
