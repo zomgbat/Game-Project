@@ -20,6 +20,7 @@ move() {
 checkForBoundaries() {
     if (this.y >= boardHeight) {
         this.deSpawn()
+    
     }
 }
 

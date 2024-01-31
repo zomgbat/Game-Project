@@ -28,6 +28,8 @@ class Player {
 
         this.checkForBoundaries();
 
+      
+
         this.element.style.left = `${this.x}px`;
         this.element.style.top = `${this.y}px`;
     }

@@ -2,12 +2,12 @@ console.log("index.js running");
 
 let enemyCreationFrame = 100;
 let enemy2CreationFrame = 100;
-let frenemyCreationFrame = 100;
+let frenemyCreationFrame = 70;
 let scoreIncrementFrame = 10;
-let enemyVelocity = 1;
-let enemy2Velocity = 1;
-let frenemyVelocity = 1;
-let gameLives = 1;
+let enemyVelocity = 5;
+let enemy2Velocity = 4;
+let frenemyVelocity = 5;
+let gameLives = 100;
 
 const boardElement = document.querySelector("#game-board");
 const boardWidth = boardElement.getBoundingClientRect().width;
@@ -17,32 +17,19 @@ const boardHeight = boardElement.getBoundingClientRect().height;
 const startButton = document.querySelector("#startButton");
 startButton.onclick = () => {
     boardElement.style.visibility = "visible";
-    const deletePage = document.querySelector("start-screen");
+
+
+    const deletePage = document.querySelector("#start-screen");
     deletePage.remove();
 
     fullGame();
 };
-
+let game
 function fullGame() {
     
-
-
-
-
-    const game = new Game(gameLives);
-
-
+     game = new Game(gameLives);
     const gameBoard = document.getElementById("game-board");
     gameBoard.style.visibility = "visible";
-
-
-
-
-
-
-    //block
-
-
 
 
     function gameloop() {
@@ -60,6 +47,9 @@ function fullGame() {
 
             }
             if (game.frames % scoreIncrementFrame === 0) {
+                for (let i = 0; i < 3; i++) {
+                    game.frenemies.push(new frenemy(frenemyVelocity));
+                }
                 game.score++;
                 game.updateScore();
             }
@@ -78,24 +68,39 @@ function fullGame() {
             requestAnimationFrame(gameloop);
         } else {
             game.player.element.remove();
-            const restartButton = document.querySelector("#restartButton");
-            restartButton.style.display = "none";
-            restartButton.onclick = () => {
-                location.reload();
+            displayCrashMessage()
 
-            }
+
+
         }
     }
-
     requestAnimationFrame(gameloop);
-
-
     document.addEventListener("keydown", (event) => {
         if (!game.gameOver) {
             game.player.move(event.key);
         }
-
+    
     });
 }
 
+
+
+
+
+const restartButton = document.querySelector("#restartButton");
+restartButton.style.display = "visible";
+
+// Add this condition to show the button when lives end
+if (game.lives <= 0) {
+    restartButton.style.display = "block";
+}
+
+restartButton.onclick = () => {
+    location.reload();
+}
+
+
+
 // Call the fullGame function to start the game
+
+

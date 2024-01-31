@@ -18,63 +18,33 @@ class Game {
     }
     updateScore() {
         document.querySelector("#score").innerText = this.score;
-    }
-
-
-
-
-
-    
-    
+    }    
 }
 
-/*
-
-If I want to add a RADIO BUTTON with 4 options
 
 
+
+
+    
 function displayCrashMessage() {
-    const options = [
-        { id: "crashRadio1", value: "1", label: "OPTION 1" },
-        { id: "crashRadio2", value: "2", label: "OPTION 2" },
-        { id: "crashRadio3", value: "3", label: "OPTION 3" },
-        { id: "crashRadio4", value: "4", label: "OPTION 4"
-    
-    }
-    ];
-
-    
     const container = document.createElement("div");
     container.style.position = "fixed";
     container.style.top = "50%";
     container.style.left = "50%";
     container.style.transform = "translate(-50%, -50%)";
     container.style.fontSize = "24px";
-    container.style.color = "red";
-    container.style.backgroundColor = "white" ;
-
-    
-
-    options.forEach((option) => {
-        const radioButton = document.createElement("input");
-        radioButton.type = "radio";
-        radioButton.name = "crashOption";
-        radioButton.id = option.id;
-        radioButton.value = option.value;
-        radioButton.style.marginRight = "10px";
-
-        const label = document.createElement("label");
-        label.textContent = option.label;
-        label.setAttribute("for", option.id);
-
-        container.appendChild(radioButton);
-        container.appendChild(label);
-    });
-
-    
+    container.style.color = "black";
+    container.style.backgroundColor = "white";
+    container.style.padding = "20px";
+    container.style.textAlign = "center";
+    container.style.borderRadius = "10px";
+    container.textContent = `Game Over! You Collected ${game.score} points worth of Fish! Refresh to Restart` // Message text or any additional content can be added here
+    container.appendChild(document.createElement("br"));
+    container.appendChild(restartButton);
 
     document.body.appendChild(container);
 }
 
 
-*/
+
+

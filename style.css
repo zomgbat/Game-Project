@@ -3,24 +3,33 @@ margin: 0px;
 padding: 0px;
 font-family: monospace;
 size: 12px;
-color: black;
+color: white;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 h1 {
-  background-image: url('https://as2.ftcdn.net/v2/jpg/04/64/84/79/1000_F_464847981_b4uMmaoh4wN6Iv93g6YiN3BNy03g1Uw6.jpg'); /* Replace with your image URL */
-  background-size: cover; /* Adjust to 'contain' or other values based on your preference */
-  color: #fff; /* Set the text color to be visible against the background image */
-  padding: 10px; /* Optional: Add padding for better aesthetics */
+  font-size: 5em; /* Adjust the size as needed */
 }
 
+p {
+  font-size: 2.3em; /* Adjust the size as needed */
+}
 
 #game-board {
   visibility:hidden;
-    width: 780px;
-    height: 420px;
+    width: 960px;
+    height: 410px;
     position: relative;
     overflow: hidden;
-    background: url("https://external-preview.redd.it/VFAdB1esp6F_2qfH3ftUJiHKErdR-NmqDCm442OlFX8.jpg?width=960&crop=smart&auto=webp&s=54c0eddceaa13ceda72bbe6b48cf061cb74d0901");}
+    background: url('./assets/fotos2/VFAdB1esp6F_2qfH3ftUJiHKErdR-NmqDCm442OlFX8.webp');
+  
+  }
+
+    
 
 #player {
     position: absolute;
@@ -45,31 +54,74 @@ h1 {
 .frenemy{
   position: absolute;
   width: 50px;
-  height: 10px;
-  background-color: green;
-  background: url('https://cdn.pixabay.com/photo/2021/03/27/05/06/fish-6127484_960_720.png') center/cover;
+  height: 50px;
+  background: url("./assets/fotos2/fishTile_072.png");
+  background-size: 50% 50%; /* Adjust the percentage values as needed */
+  /* other styles */
   transform: rotate(270deg); /* Rotate the image by 45 degrees */
-  background-size: 50%; /* Decrease the image size by 50% */
+    animation: changeBackground 10s infinite; /* Adjust the duration as needed */
+}
 
+@keyframes changeBackground {
+    0%, 100% {
+      background: url("./assets/fotos2/fishTile_076.png");
+    }
+    25% {
+      background: url("./assets/fotos2/fishTile_073.png");
+    }
+    50% {
+      background: url("./assets/fotos2/fishTile_074.png");
+    }
+    /* Add more keyframes for additional backgrounds */
+}
+
+ 
 
   /* //https://cdn.pixabay.com/photo/2020/06/29/20/22/fish-5354282_1280.png
 
 //https://cdn.pixabay.com/photo/2020/05/16/19/47/fish-5178959_1280.png */
-}
+
 
 
 .enemy2{
   position: absolute;
-  width: 35px;
-  height: 50px;
-  background: url('https://cdn.pixabay.com/photo/2021/08/16/00/24/fish-6548983_960_720.png') center/cover;
+    width: 95px;
+    height: 60px;
+    background: url('https://pngimg.com/d/shark_PNG18830.png') center/cover;
+    transform: rotate(270deg); /* Rotate the image by 45 degrees */
+}
+
+#start-screen {
+  background-image: url("./assets/fotos2/463192.jpg");
+  background-size:auto;
+  color: #fff;
+  padding: 10px;
+  height: 90%;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Align children in a column layout */
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top of the container */
 }
 
 
 
-    
+#startButton {
+  height: 150px;
+  width: 300px;
+  background-color: white;
+  color: black;
+  font-size: 50px;
+  font-family: sans-serif;
+  ;
+  
 
+}
 
+#restartButton{
+  visibility: hidden;
+
+}
  
 /*
 
