@@ -51,14 +51,19 @@ p {
   
 
 
+
+ /* Keyframes does not slow the game down,
+ percentages start from above and change the color incrementaly */
+
+
+
 .frenemy{
   position: absolute;
   width: 62px;
   height: 50px;
   background: url("./assets/fotos2/fishTile_072.png");
- /* other styles */
   transform: rotate(270deg); /* Rotate the image by 45 degrees */
-    animation: changeBackground 2s infinite; /* Adjust the duration as needed */
+  animation: changeBackground 2s infinite; /* Adjust the duration as needed */
 }
 
 @keyframes changeBackground {
@@ -107,11 +112,6 @@ p {
 
   }
 
-  /* //https://cdn.pixabay.com/photo/2020/06/29/20/22/fish-5354282_1280.png
-
-//https://cdn.pixabay.com/photo/2020/05/16/19/47/fish-5178959_1280.png */
-
-
 
 .enemy2{
   position: absolute;
@@ -159,11 +159,3 @@ p {
   visibility: hidden;
 
 }
- 
-/*
-
-//url("https://external-preview.redd.it/VFAdB1esp6F_2qfH3ftUJiHKErdR-NmqDCm442OlFX8.jpg?width=960&crop=smart&auto=webp&s=54c0eddceaa13ceda72bbe6b48cf061cb74d0901"
- //url('https://cdn-icons-png.flaticon.com/512/3118/3118044.png') center/cover;
-
-//url('https://pngimg.com/d/shark_PNG18830.png') center/cover; */
-

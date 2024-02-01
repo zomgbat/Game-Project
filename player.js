@@ -1,7 +1,7 @@
 class Player {
     constructor(x, y) {
         this.x = x;
-        this.y = boardHeight - 150;
+        this.y = boardHeight - 80;
         this.velocity = 70;
         this.element = document.querySelector("#player");
         this.width = this.element.getBoundingClientRect().width;

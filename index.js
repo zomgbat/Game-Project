@@ -1,7 +1,7 @@
 console.log("index.js running");
 
-let enemyCreationFrame = 100;
-let enemy2CreationFrame = 100;
+let enemyCreationFrame = 60;
+let enemy2CreationFrame = 50;
 let frenemyCreationFrame = 70;
 let scoreIncrementFrame = 10;
 let enemyVelocity = 15;
@@ -21,39 +21,35 @@ startButton.onclick = () => {
 
     boardElement.style.visibility = "visible";
 
-
     const deletePage = document.querySelector("#start-screen");
     deletePage.remove();
 
     fullGame();
-    bgmusic2() 
+    bgmusic2()
 };
-
 
 
 let game
 // Call the fullGame function to start the game
 function fullGame() {
-   
-    
-     game = new Game(gameLives);
+
+
+    game = new Game(gameLives);
     const gameBoard = document.getElementById("game-board");
     gameBoard.style.visibility = "visible";
 
 
     function gameloop() {
 
-        if (!game.gameOver) {
+        if (!game.gameOver && !paused) {
             game.frames++;
             game.player.crashTest();
             game.player.crashTest2();
             game.player.crashTest3();
             if (game.frames % enemyCreationFrame === 0) {
                 game.enemies.push(new Enemy(enemyVelocity));
-                // Create and push three enemies
                 game.enemies2.push(new Enemy2(enemy2Velocity));
                 game.frenemies.push(new frenemy(frenemyVelocity));
-
             }
             if (game.frames % scoreIncrementFrame === 0) {
                 for (let i = 0; i < 3; i++) {
@@ -88,9 +84,38 @@ function fullGame() {
         if (!game.gameOver) {
             game.player.move(event.key);
         }
-    
+        if (event.key === " ") { // Spacebar
+            paused = !paused; // Toggle the paused state
+            if (paused) {
+                // Display a pause message or perform any other pause-related actions
+                console.log("Game Paused");
+            } else {
+                // Resume the game or perform any other resume-related actions
+                console.log("Game Resumed");
+                gameloop(); // Restart the game loop
+            }
+        } else if (!game.gameOver && !paused) {
+            game.player.move(event.key);
+        }
     });
-}
+    };
+
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === " ") { // Spacebar
+        paused = !paused; // Toggle the paused state
+        if (paused) {
+            // Display a pause message or perform any other pause-related actions
+            console.log("Game Paused");
+        } else {
+            // Resume the game or perform any other resume-related actions
+            console.log("Game Resumed");
+            gameloop(); // Restart the game loop
+        }
+    } else if (!game.gameOver && !paused) {
+        game.player.move(event.key);
+    }
+});
 
 
 

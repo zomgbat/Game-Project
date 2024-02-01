@@ -10,67 +10,48 @@
 
 <body>
 
-
     <div id="start-screen">
         <h1>Unlock the Loch</h1>
         <br>
         <audio id="bgmusic" controls autoplay>
             <source src="assets/sounds/Juhani Junkala [Retro Game Music Pack] Ending.wav" type="audio/wav"
                 preload="auto"> Your browser does not support the audio tag.
-
         </audio>
         <br>
         <br>
-
 
         <div id="intro">
-            <p>A tsunami wreaks havoc upon Loch Java. You must help a local fisher
-                <b>collect fish</b> to feed his starving village but <b>don't catch</b> the sharks! <br><br> Points for fish, lose lives for
-                catching sharks!</p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-
+            <p>A tsunami wreaks havoc upon the bonnie Loch Java. You must help a local fisher
+                <b>collect fish</b> to feed his starving village... but <b>don't catch</b> the sharks! <br><br> Points
+                for fish, lose lives for
+                catching sharks!<br><br> Use the directional keyboard keys to move <b>↑ ↓ → ← </b>
+            </p><br><br><br><br><br><br>
         </div>
+
         <button id="startButton">Start New Game</button>
     </div> <!-- removing this removes the audio-->
+
     <div id="game-board">
         <audio id="bgmusic2" controls>
-            <source src="assets\sounds\chase_in_the_night.wav" type="audio/wav"
-                preload="auto"> Your browser does not support the audio tag.
-
+            <source src="assets\sounds\chase_in_the_night.wav" type="audio/wav" preload="auto"> Your browser does not
+            support the audio tag.
         </audio>
 
 
-        <audio id="collisionSound" src="assets\sounds\point_special.wav"></audio>
-
-        <audio id="collisionSound2" src=" assets\sounds\uhoh.wav"></audio>
-        <audio id="collisionSound3" src=" assets\sounds\growl3.wav" ></audio>
-
-    
-       
+    <audio id="collisionSound" src="assets\sounds\point_special.wav"></audio>
+    <audio id="collisionSound2" src=" assets\sounds\uhoh.wav"></audio>
+    <audio id="collisionSound3" src=" assets\sounds\growl3.wav"></audio>
 
         <p>Lives: <span id="lives">0</span></p>
         <p>Score: <span id="score">0</span></p>
         <div id="player"></div>
-
-
 
         <!-- Add this button inside your body tag -->
         <button id="restartButton" class="buttonClass">Restart Game</button>
     </div>
 
 
-
-
-
-
-
-
+   <!-- Links all the JS files -->
     <script src="./player.js"></script>
     <script src="./enemy.js"></script>
     <script src="./frenemy.js"></script>
