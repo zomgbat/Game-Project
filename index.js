@@ -41,13 +41,14 @@ function fullGame() {
 
     function gameloop() {
 
-        if (!game.gameOver && !paused) {
+        if (!game.gameOver) {
             game.frames++;
             game.player.crashTest();
             game.player.crashTest2();
             game.player.crashTest3();
             if (game.frames % enemyCreationFrame === 0) {
                 game.enemies.push(new Enemy(enemyVelocity));
+              
                 game.enemies2.push(new Enemy2(enemy2Velocity));
                 game.frenemies.push(new frenemy(frenemyVelocity));
             }
@@ -84,38 +85,9 @@ function fullGame() {
         if (!game.gameOver) {
             game.player.move(event.key);
         }
-        if (event.key === " ") { // Spacebar
-            paused = !paused; // Toggle the paused state
-            if (paused) {
-                // Display a pause message or perform any other pause-related actions
-                console.log("Game Paused");
-            } else {
-                // Resume the game or perform any other resume-related actions
-                console.log("Game Resumed");
-                gameloop(); // Restart the game loop
-            }
-        } else if (!game.gameOver && !paused) {
-            game.player.move(event.key);
-        }
+
     });
-    };
-
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === " ") { // Spacebar
-        paused = !paused; // Toggle the paused state
-        if (paused) {
-            // Display a pause message or perform any other pause-related actions
-            console.log("Game Paused");
-        } else {
-            // Resume the game or perform any other resume-related actions
-            console.log("Game Resumed");
-            gameloop(); // Restart the game loop
-        }
-    } else if (!game.gameOver && !paused) {
-        game.player.move(event.key);
-    }
-});
+}
 
 
 
