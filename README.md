@@ -1,6 +1,8 @@
 # UNLOCK THE LOCH
 
-A basic game based on reflexes, where you have to catch fish and avoid the sharks using the directional pad. 
+![Image](<assets/fotos2/Screenshot 2024-02-01 092715.png>)
+
+A simple game relying on reflexes, where you have to catch fish and avoid the sharks using the directional pad. 
 
 ##STACK
 - JavaScript
@@ -27,7 +29,7 @@ The approach for this game is to use classes and orient the code to objects.
 
 # Planning
 
-Also in backlog -divided into smaller tasks. Trello to organize tasks and to keep track of progress. Also, a wireframe to have a better idea of how the game looks.
+Also in backlog - Trello and Wireframe
 
 LINK OF THE PUBLISHED GAME: https://zomgbat.github.io/Game-Project/
 LINK OF THE SLIDES: https://docs.google.com/presentation/d/1gXUdHRpWmwk2s5g_ZC-RGxXzf_X6495JxpysY-f3xQw/edit?usp=sharing
