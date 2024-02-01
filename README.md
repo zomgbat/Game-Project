@@ -26,6 +26,7 @@ The approach for this game is to use classes and orient the code to objects.
 - pause button
 - better graphics
 - score board
+- riddles for bonus 
 
 # Planning
 
