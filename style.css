@@ -1,7 +1,161 @@
 *{
-
 margin: 0px;
 padding: 0px;
 font-family: monospace;
+size: 12px;
+color: white;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 5em; /* Adjust the size as needed */
+}
+
+p {
+  font-size: 2.3em; /* Adjust the size as needed */
+}
+
+#game-board {
+  visibility:hidden;
+    width: 960px;
+    height: 610px;
+    position: relative;
+    overflow: hidden;
+    background: url('./assets/fotos2/pxfuel (2).jpg');
+  
+  }
+
+    
+
+#player {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 60px;
+    height: 66px;
+    background: url('https://cdn-icons-png.flaticon.com/512/3118/3118044.png') center/cover;
+  }
+  
+ 
+  .enemy{
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    background: url('https://pngimg.com/d/shark_PNG18830.png') center/cover;
+    transform: rotate(270deg); /* Rotate the image by 45 degrees */
+} 
+  
+
+
+
+ /* Keyframes does not slow the game down,
+ percentages start from above and change the color incrementaly */
+
+
+
+.frenemy{
+  position: absolute;
+  width: 62px;
+  height: 50px;
+  background: url("./assets/fotos2/fishTile_072.png");
+  transform: rotate(270deg); /* Rotate the image by 45 degrees */
+  animation: changeBackground 2s infinite; /* Adjust the duration as needed */
+}
+
+@keyframes changeBackground {
+    0% {
+      background-image: url('assets/fotos2/fish-5178959_1280.png');
+    }
+    10% {
+       background-image: url('assets/fotos2/fish-5354282_1280.png');
+        
+    }
+    20% {
+      background-image: url('assets/fotos2/fish-6127484_960_720.webp');
+  
+    }
+    30% {
+        background-image: url('assets/fotos2/fishTile_075.png');
+    }
+    40% {
+        background-image: url('assets/fotos2/fishTile_076.png');
+    }
+    50% {
+        background-image: url('assets/fotos2/fishTile_077.png');
+    }
+    60% {
+        background-image: url('assets/fotos2/fishTile_078.png');
+    }
+    70% {
+        background-image: url('assets/fotos2/fishTile_079.png');
+    }
+    80% {
+        background-image: url('assets/fotos2/fishTile_080.png');
+    }
+    90% {
+        background-image: url('assets/fotos2/fishTile_081.png');
+    }
+    100% {
+      background-image: url('assets/fotos2/fishTile_072.png');
+    }
+    110% {
+      background-image: url('assets/fotos2/fishTile_073.png');
+       
+    }
+    120% {
+      background-image: url('assets/fotos2/fishTile_074.png');
+     }
+
+  }
+
+
+.enemy2{
+  position: absolute;
+   width: 120px;
+    height: 80px;
+    background: url('https://pngimg.com/d/shark_PNG18830.png') center/cover;
+    transform: rotate(270deg); /* Rotate the image by 45 degrees */
+}
+
+#start-screen {
+  background-image: url("./assets/fotos2/463192.jpg");
+  background-size:auto;
+  color: #fff;
+  padding: 10px;
+  height: 90%;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Align children in a column layout */
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top of the container */
+}
+
+
+
+#startButton {
+  height: 150px;
+  width: 300px;
+  background-color: white;
+  color: black;
+  font-size: 50px;
+  font-family: sans-serif;
+  ;
+  
+}
+
+
+
+#musicPlayer {
+  width: 300px;
+  margin: 20px auto;
+
+}
+
+#restartButton{
+  visibility: hidden;
 
 }
