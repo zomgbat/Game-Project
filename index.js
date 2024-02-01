@@ -16,6 +16,8 @@ const bgmusic = document.querySelector("#bgmusic");
 bgmusic2.volume = 0.2;
 
 
+//for changes sake
+
 const startButton = document.querySelector("#startButton");
 startButton.onclick = () => {
 
