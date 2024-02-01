@@ -43,7 +43,7 @@ p {
  
   .enemy{
     position: absolute;
-    width: 120px;
+    width: 160px;
     height: 80px;
     background: url('https://pngimg.com/d/shark_PNG18830.png') center/cover;
     transform: rotate(270deg); /* Rotate the image by 45 degrees */
@@ -115,10 +115,12 @@ p {
 
 .enemy2{
   position: absolute;
-   width: 120px;
+   width: 160px;
     height: 80px;
     background: url('https://pngimg.com/d/shark_PNG18830.png') center/cover;
     transform: rotate(270deg); /* Rotate the image by 45 degrees */
+    
+    
 }
 
 #start-screen {

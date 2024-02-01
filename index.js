@@ -7,7 +7,7 @@ let scoreIncrementFrame = 10;
 let enemyVelocity = 15;
 let enemy2Velocity = 10;
 let frenemyVelocity = 5;
-let gameLives = 7;
+let gameLives = 1;
 
 const boardElement = document.querySelector("#game-board");
 const boardWidth = boardElement.getBoundingClientRect().width;
@@ -15,6 +15,8 @@ const boardHeight = boardElement.getBoundingClientRect().height;
 const bgmusic = document.querySelector("#bgmusic");
 bgmusic2.volume = 0.2;
 
+
+//for changes sake
 
 const startButton = document.querySelector("#startButton");
 startButton.onclick = () => {
@@ -51,6 +53,8 @@ function fullGame() {
               
                 game.enemies2.push(new Enemy2(enemy2Velocity));
                 game.frenemies.push(new frenemy(frenemyVelocity));
+
+
             }
             if (game.frames % scoreIncrementFrame === 0) {
                 for (let i = 0; i < 3; i++) {
@@ -59,18 +63,21 @@ function fullGame() {
                 game.score++;
                 game.updateScore();
             }
-            game.enemies.forEach((enemy) => {
-                enemy.move();
-                enemy.checkForBoundaries();
+        
+
+
+            const enemyArrays = [game.enemies, game.enemies2, game.frenemies];
+
+            enemyArrays.forEach((enemyArray) => {
+                enemyArray.forEach((enemy) => {
+                    enemy.move();
+                    enemy.checkForBoundaries();
+                });
             });
-            game.enemies2.forEach((enemy2) => {
-                enemy2.move();
-                enemy2.checkForBoundaries();
-            });
-            game.frenemies.forEach((frenemy) => {
-                frenemy.move();
-                frenemy.checkForBoundaries();
-            });
+
+
+                
+            
             requestAnimationFrame(gameloop);
         } else {
             game.player.element.remove();

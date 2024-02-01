@@ -65,7 +65,7 @@ function displayCrashMessage() {
     const container = document.createElement("div");
     container.style.position = "fixed";
     container.style.top = "50%";
-    container.style.left = "30%"; // Set left to 50%
+    container.style.left = "50%"; // Set left to 50%
     container.style.transform = "translate(-50%, -50%)";
     container.style.fontSize = "24px";
     container.style.color = "black";
