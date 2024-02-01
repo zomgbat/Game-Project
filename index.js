@@ -4,10 +4,10 @@ let enemyCreationFrame = 60;
 let enemy2CreationFrame = 50;
 let frenemyCreationFrame = 70;
 let scoreIncrementFrame = 10;
-let enemyVelocity = 15;
-let enemy2Velocity = 10;
+let enemyVelocity = 11;
+let enemy2Velocity = 13;
 let frenemyVelocity = 5;
-let gameLives = 7;
+let gameLives = 3;
 
 const boardElement = document.querySelector("#game-board");
 const boardWidth = boardElement.getBoundingClientRect().width;
