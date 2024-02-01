@@ -7,7 +7,7 @@ let scoreIncrementFrame = 10;
 let enemyVelocity = 15;
 let enemy2Velocity = 10;
 let frenemyVelocity = 5;
-let gameLives = 3;
+let gameLives = 7;
 
 const boardElement = document.querySelector("#game-board");
 const boardWidth = boardElement.getBoundingClientRect().width;
